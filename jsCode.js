@@ -34,9 +34,9 @@ counter(); // 12
 
 // Question :- 2667 Create Hello World Function
 
-var createHelloWorld = function () {
-  return function (...args) {
-    return 'Hello World';
+var createHelloWorld = () => {
+  return (...args) => {
+    console.log('Hello World');
   };
 };
 
