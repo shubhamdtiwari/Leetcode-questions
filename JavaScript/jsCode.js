@@ -42,7 +42,7 @@ var createHelloWorld = () => {
 
 const f = createHelloWorld();
 f(); // "Hello World"
-*/
+
 
 // Question :- 2704 To Be Or Not To Be
 
@@ -65,6 +65,22 @@ var expect = function (val) {
   };
 };
 
+*/
+
+// modified version of question 2704 To Be Or Not To Be
+
+const expect = (val) => {
+  return {
+    toBe: (expected) => {
+      if (val === expected) return true;
+      else throw new Error('Not Equal');
+    },
+    notTobe: (unexpected) => {
+      if (val !== unexpected) return true;
+      else throw new Error('Equal');
+    },
+  };
+};
 /**
  * expect(5).toBe(5); // true
  * expect(5).notToBe(5); // throws "Equal"
