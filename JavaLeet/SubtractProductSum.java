@@ -1,9 +1,14 @@
 package JavaLeet;
 
+import java.util.Scanner;
+
 public class SubtractProductSum {
     
     public static void main(String[] args) {
-        System.out.println(subtractProductAndSum(234));
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+
+        System.out.println(subtractProductAndSum(n));
     }
 
 
