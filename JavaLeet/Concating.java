@@ -4,10 +4,10 @@ public class Concating {
   public static void main(String[] args) {
     int[] nums = {1, 2, 3};
     int[] ans = getConcatenation(nums);
-    // for (int i : ans) {
-    //     System.out.print(i + " ");
-    // }
-    System.out.println(ans);
+    for (int i : ans) {
+        System.out.print(i + " ");
+    }
+   
 
     
     }
