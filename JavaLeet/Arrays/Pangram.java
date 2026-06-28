@@ -1,4 +1,4 @@
-package JavaLeet;
+package JavaLeet.Arrays;
 
 public class Pangram{
 

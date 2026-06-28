@@ -1,4 +1,4 @@
-package JavaLeet;
+package JavaLeet.Arrays;
 
 import java.util.ArrayList;
 import java.util.List;

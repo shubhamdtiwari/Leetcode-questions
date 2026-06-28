@@ -1,4 +1,4 @@
-package JavaLeet;
+package JavaLeet.Matrix;
 
 public class EvenNumberOfDigits {
 
