@@ -20,7 +20,7 @@ public class addToArrayInteger {
         int carry = 0;
 
         while(i >= 0 && (k > 0 || carry > 0)){
-
+             // changing the arrays to sum 
             num[i] += carry + k % 10;
             carry = num[i] / 10;
             num[i] %= 10;
@@ -28,6 +28,7 @@ public class addToArrayInteger {
             i--;
 
         }
+        // rest first digits add after it
 
         k += carry;
         while(k>0)
@@ -37,5 +38,25 @@ public class addToArrayInteger {
         }
         for(int j:num) ans.add(j);
         return ans;
+    }
+
+    static List<Integer> addToArrayForm2(int[] num, int k){
+         List<Integer> result = new ArrayList<>();
+            
+            int carry = 0;
+            int i = num.length - 1;
+
+            while(i >= 0 || k != 0 || carry != 0){
+                //    int numDigit = (i >= 0) ? num[i] : 0;
+                //    int digitSum = numDigit + k % 10 + carry;
+                   int digitSum = (i >= 0) ? num[i] : 0 + k % 10 + carry;
+
+                   k /= 10;
+
+                   result.add(0, digitSum % 10);
+                   carry = digitSum / 10;
+                   if( i >= 0) i--;
+            }       
+        return result;
     }
 }
