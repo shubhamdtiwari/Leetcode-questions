@@ -26,8 +26,6 @@ public class nUniqueInteger {
                 }else{
                     output[n - i] = -i;
                 }
-
-                
             }
         }
 
