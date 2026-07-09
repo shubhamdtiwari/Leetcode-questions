@@ -47,26 +47,37 @@ public class MaximumSubarray {
             // there is no need of storing it in arraylist i can just buse max to get the value
     
         
-        int max = Integer.MIN_VALUE;
+        // int max = Integer.MIN_VALUE;
         
-        for(int i = 0; i < nums.length; i++){
+        // for(int i = 0; i < nums.length; i++){
             
-            int largeSum = nums[i];
-            if(largeSum > max){
-            max = largeSum;
-            }
-            for(int j = i + 1; j < nums.length; j++){
-                largeSum += nums[j];
-                if(largeSum > max){
-                    max = largeSum;
-                }
-            }
+        //     int largeSum = nums[i];
+        //     if(largeSum > max){
+        //     max = largeSum;
+        //     }
+        //     for(int j = i + 1; j < nums.length; j++){
+        //         largeSum += nums[j];
+        //         if(largeSum > max){
+        //             max = largeSum;
+        //         }
+        //     }
         
-        }
+        // }
         
-        return max;
+        // return max;
 
         // return allSum;
-    
+
+        // by using Kadane's Algorithm
+
+        int currentSum = nums[0];
+        int maxSum = nums[0];
+        
+        for (int i = 1; i < nums.length; i++) {
+            currentSum = Math.max(currentSum + nums[i], nums[i]);
+            maxSum = Math.max(maxSum, currentSum);
+        }
+
+        return maxSum;
     }
 }
