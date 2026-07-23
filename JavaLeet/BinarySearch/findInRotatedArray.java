@@ -7,6 +7,8 @@ public class findInRotatedArray {
         System.out.println(ans);
     }
 
+    // this will not work in duplicate values
+
     static int search(int[] arr, int target){
         int pivot = pivot(arr);
 
