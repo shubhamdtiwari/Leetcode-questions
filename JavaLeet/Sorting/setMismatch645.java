@@ -1,12 +1,32 @@
 package JavaLeet.Sorting;
-
-public class setMismatch {
+// https://leetcode.com/problems/set-mismatch/
+public class setMismatch645 {
     public static void main(String[] args) {
         int[] nums = { 1, 2, 2, 4 };
         int[] finalAns = Mismatch(nums);
         for (int el : finalAns) {
             System.out.println(el);
         }
+
+    }
+
+    static int[] newMismatch(int[] arr){
+        int i = 0;
+
+        while (i < arr.length) {
+            if (arr[i] != arr[arr[i] - 1]) {
+                swap(arr, i, arr[i] - 1);
+            } else {
+                i++;
+            }
+        }
+
+        for (int index = 0; index < arr.length; index++) {
+            if (arr[index] != index + 1) {
+               return new int[] {arr[index], index + 1};
+            }
+        }
+        return new int[] {-1,-1};
 
     }
 
