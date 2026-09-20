@@ -1,4 +1,5 @@
 package JavaLeet.Searching.BinarySearch;
+// https://leetcode.com/problems/binary-search/
 
 public class BinarySearch704 {
     public static void main(String[] args) {
