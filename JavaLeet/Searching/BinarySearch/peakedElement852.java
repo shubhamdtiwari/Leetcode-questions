@@ -1,6 +1,7 @@
 package JavaLeet.Searching.BinarySearch;
+// https://leetcode.com/problems/peak-index-in-a-mountain-array/
 
-public class peakedElement {
+public class peakedElement852 {
     public static void main(String[] args) {
         int[] arr = { 0, 1, 3, 5, 7, 4, 2, 1 };
 
