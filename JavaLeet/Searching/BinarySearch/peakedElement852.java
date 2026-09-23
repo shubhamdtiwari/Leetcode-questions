@@ -19,7 +19,7 @@ public class peakedElement852 {
 
             if (arr[m] > arr[m + 1]) {
                 e = m;
-            } else if (arr[m] < arr[m + 1]) {
+            } else {
                 s = m + 1;
             }
         }
